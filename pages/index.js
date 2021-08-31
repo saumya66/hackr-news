@@ -53,7 +53,7 @@ export default function Home() {
 							<Link href="/top">
 								<button className={styles.authBtn}>Get In !</button>
 							</Link>
-							<a href="/Tweet">
+							<a href="https://github.com/saumya66/hackr-news">
 								<button className={styles.authBtn}>
 									<FontAwesomeIcon
 										style={{ marginRight: "0.2rem" }}
@@ -88,6 +88,18 @@ export default function Home() {
 						desc="Clean &#38; Responsive UI to make reading effortless ."
 					/>
 				</div>
+				<h3 style={{ textAlign: "center" }}>
+					{" "}
+					Built with 🧡 by{" "}
+					<a
+						href="https://twitter.com/saumya4real"
+						target="_blank"
+						rel="noreferrer"
+						style={{ color: "#5B31EC" }}
+					>
+						Saumya !
+					</a>
+				</h3>
 			</div>
 		</>
 	);
