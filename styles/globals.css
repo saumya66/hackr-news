@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+html,
+body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body,
+body[data-theme="light"] {
+	--color-text-primary: #27201a;
+	--color-text-secondary: #076963;
+	--color-bg-primary: white;
+	--color-bg-secbackground-color: #ffffff;
+	--image-body: linear-gradient(180deg, #ffffff 0%, #c5b1ff 68%, #8a60ff 95%);
+	--color-appbg: #d6ddf9;
+	--color-bg-toggle: #1e90ff;
+}
+/* #252837 */
+body[data-theme="dark"] {
+	--color-text-primary: #e3e3e3;
+	--color-text-secondary: #ff6b00;
+	--color-bg-primary: #151728;
+	--color-bg-secondary: #24273b;
+	--color-bg-toggle: #a9a9a9;
+	--color-appbg: #1d1e42;
+
+	--image-body: linear-gradient(
+		180deg,
+		#151728 0%,
+		#151728 45%,
+		#1c035c 63%,
+		#320c9e 100%
+	);
+}
+
+body {
+	background-color: var(--color-appbg);
+	/* background-image: var(--image-body); */
+	color: var(--color-text-primary);
+
+	font-family: Nunito;
+	transition: background 0.25s ease-in-out;
+}
+
+h1 {
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}

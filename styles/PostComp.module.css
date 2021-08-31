@@ -1,0 +1,114 @@
+.postComp {
+	height: auto;
+	width: 98%;
+	min-height: 7rem;
+	background-color: var(--color-bg-primary);
+
+	display: flex;
+
+	border-bottom: 1px solid #b6bdcc;
+}
+
+.upVotes {
+	width: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.icon {
+	/* color: var(--color-text-primary); */
+	color: #02c282;
+	font-size: 1.2rem;
+}
+.votes {
+	color: var(--color-text-primary);
+	font-weight: 600;
+}
+
+.mainArea {
+	width: 90%;
+
+	padding: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.firstRow {
+	padding-top: 0.3rem;
+	height: auto;
+	font-weight: 600;
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+}
+.secondRow {
+	height: 15%;
+	display: flex;
+	justify-content: space-between;
+}
+.thirdRow {
+	min-height: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.linkCol {
+	color: #b6bdcc;
+	font-size: 0.6rem;
+}
+.author {
+	font-weight: 600;
+	font-size: 0.7rem;
+}
+.saveIcon {
+	transition: 0.3s;
+}
+.saveIcon:hover {
+	color: #5b32ed;
+}
+.firstCol {
+	display: flex;
+}
+.secondCol {
+	padding-right: 0.6rem;
+}
+.authorCont {
+	cursor: pointer;
+	display: flex;
+	margin-right: 1.6rem;
+}
+.commentCont {
+	cursor: pointer;
+	display: flex;
+}
+.commentIcon,
+.userIcon {
+	cursor: pointer;
+	color: #4d5b79;
+	transition: 0.3s;
+	font-size: 0.8rem;
+	margin-right: 0.4rem;
+}
+.userIcon {
+	cursor: pointer;
+	font-size: 0.8rem;
+}
+.commentIcon:hover,
+.userIcon:hover {
+	color: #5b32ed;
+	transition: 0.3s;
+}
+.author {
+	color: var(--color-text-primary);
+	font-weight: 300;
+}
+
+.comment {
+	color: var(--color-text-primary);
+	font-weight: 300;
+	font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 690px) {
+}

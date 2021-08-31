@@ -1,1 +1,1 @@
-# hackr-news
+# HackrNews

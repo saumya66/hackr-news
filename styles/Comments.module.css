@@ -1,0 +1,44 @@
+.comments {
+	height: fit-content;
+	width: 98%;
+
+	padding: 0.5rem;
+	background-color: var(--color-bg-primary);
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #b6bdcc;
+}
+.rowOne {
+	height: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+.name {
+	color: var(--color-text-primary);
+	padding-left: 0.6rem;
+	font-weight: 600;
+}
+.pageTitle {
+	display: flex;
+	width: 98%;
+	height: 2rem;
+	align-self: center;
+	align-items: flex-start;
+	margin-top: 0.4rem;
+	padding-left: 0.4rem;
+}
+.pageName {
+	font-size: 1rem;
+	opacity: 0.6;
+}
+
+.rowSecond {
+	height: fit-content;
+	padding-top: 0.5rem;
+	font-weight: 500;
+}
+
+.rowThird {
+	/* height: 2rem; */
+}

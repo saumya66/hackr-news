@@ -1,0 +1,37 @@
+.layout {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.txt {
+	color: black;
+}
+.feedFooter {
+	display: flex;
+	justify-content: center;
+	padding-top: 0.5rem;
+}
+.saumya {
+	margin-right: 0.5rem;
+	text-align: center;
+	font-size: 1rem;
+
+	font-weight: 600;
+
+	color: var(--color-text-primary);
+}
+
+/* .twitter {
+	color: #0c85d0;
+	font-size: 1.2rem;
+}
+.linkedin {
+	color: #0a66c2;
+}
+.facebook {
+	color: #1c8bf6;
+}
+.reddit {
+	color: #ff4500;
+} */
