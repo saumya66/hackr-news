@@ -12,7 +12,14 @@ I know you love reading HackerNews so why not read it with ease !🚀
 
 Live App : https://hackrnews.vercel.app/
 
-  
+    
+## Features 🌈
+
+- Super Clean UI 🌄
+- Dark/Night Mode 🌓
+- Read Anywhere 🌌 - A PWA you can install on any OS!
+- More than A Feed!⚡ - Sign Up . Save . Karma . Comments
+- Server Side Rendered - Powered by NextJS.
 ## Future Plans 🏹
 
 - Sort/Filter the Feed.
@@ -60,14 +67,7 @@ Start the server
   npm run dev
 ```
 
-  
-## Features 🌈
 
-- Super Clean UI 🌄
-- Dark/Night Mode 🌓
-- Read Anywhere 🌌 - A PWA you can install on any OS!
-- More than A Feed!⚡ - Sign Up . Save . Karma . Comments
-- Server Side Rendered - Powered by NextJS.
   
 ## 🚀 Let's Connect 
 **Would love to connect with you ! 👋:**
