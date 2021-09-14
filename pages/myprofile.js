@@ -10,6 +10,7 @@ import Head from "next/head";
 import PostComp from "../components/PostComp";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import Image from "next/image";
+import { ConnectionStates } from "mongoose";
 
 const MyProfile = () => {
 	const { user, error, isLoading } = useUser();
@@ -21,7 +22,8 @@ const MyProfile = () => {
 		if (localStorage.getItem("bookmarks")) {
 			let ids = JSON.parse(localStorage.getItem("bookmarks"));
 			setBookmarks(ids);
-			var bk = bookmarks.map(
+
+			var bk = ids.map(
 				async (id) =>
 					await axios
 						.get(

@@ -36,11 +36,17 @@
 	flex-direction: row;
 	width: 100%;
 }
+.descRowOne {
+	display: flex;
+}
+.descRowTwo {
+}
 .rightComp {
 	height: 100%;
 	width: 50%;
 	display: flex;
 	justify-content: center;
+	position: relative;
 }
 
 .phoneMockup {
@@ -129,6 +135,15 @@
 		height: auto;
 	}
 	.desc {
+		justify-content: center;
+		flex-direction: column;
+	}
+	.descRowOne {
+		justify-content: center;
+	}
+	.descRowTwo {
+		padding-top: 1rem;
+		display: flex;
 		justify-content: center;
 	}
 	.heading {

@@ -1,7 +1,6 @@
 import styles from "../styles/Layout.module.css";
 import Navbar from "./Navbar";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faFacebook,
@@ -12,9 +11,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
-import Head from "next/head";
 import { useRouter } from "next/router";
-import Script from "next/script";
+import Image from "next/image";
 
 const Layout = ({ children }) => {
 	// const [show, setShow] = useState(true);
@@ -26,10 +24,26 @@ const Layout = ({ children }) => {
 		<>
 			<div className={styles.layout}>
 				<Navbar />
+
 				{children}
 				{show && (
+					<>
+						<a
+							href={"https://www.buymeacoffee.com/saumya66"}
+							target="_blank"
+							rel="noreferrer"
+						>
+							<div
+								style={{ position: "fixed", bottom: "20px", right: "15px" }}
+							>
+								<Image src="/buymeacoffee.png" width="70" height="70" />
+							</div>
+						</a>
+					</>
+				)}
+				{show && (
 					<div className={styles.feedFooter}>
-						<p className={styles.saumya}>🧡 Loving HackrNews ? </p>
+						<p className={styles.saumya}>🧡 Loving </p>
 						<a
 							target="_blank"
 							rel="noreferrer"
@@ -89,7 +103,7 @@ const Layout = ({ children }) => {
 							/>{" "}
 						</a>
 
-						<p className={styles.saumya}>Your share means a lot !</p>
+						<p className={styles.saumya}>HackrNews ? </p>
 					</div>
 				)}
 			</div>

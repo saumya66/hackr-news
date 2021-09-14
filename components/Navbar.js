@@ -189,9 +189,11 @@ const Navbar = () => {
 						{/* <h2 className={styles.userName}>{user.name}</h2> */}
 					</>
 				) : (
+					<Link href={"/api/auth/login"}>
 					<button className={styles.authBtn}>
-						<Link href={"/api/auth/login"}>Login </Link>
+						Login 
 					</button>
+					</Link>
 				)}
 			</div>
 		</div>

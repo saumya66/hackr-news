@@ -5,34 +5,43 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import parse from "html-react-parser";
 import { useState, useEffect } from "react";
-
+import { useUser } from "@auth0/nextjs-auth0";
+import { useRouter } from "next/router";
 const ParsedComment = (str) => {
 	return parse(`${str}`);
 };
 
 const PostComp = (props) => {
+	const {user } = useUser();
+	const router = useRouter();
 	var url = props.url ? String(props?.url) : "";
 	var postName = String(props.name);
 	const [saved, setSaved] = useState("#4d5b79");
 
 	function savePost() {
-		if (localStorage.getItem("bookmarks")) {
-			let bookmarks = localStorage.getItem("bookmarks");
-			bookmarks = JSON.parse(bookmarks);
-			if (bookmarks.includes(props.id)) {
-				bookmarks = bookmarks.filter((id) => id != props.id);
-				setSaved("#4d5b79");
+		if(!user){
+			router.push("/api/auth/login");
+		}
+		else{
+			if (localStorage.getItem("bookmarks")) {
+				let bookmarks = localStorage.getItem("bookmarks");
+				bookmarks = JSON.parse(bookmarks);
+				if (bookmarks.includes(props.id)) {
+					bookmarks = bookmarks.filter((id) => id != props.id);
+					setSaved("#4d5b79");
+				} else {
+					bookmarks.push(props.id);
+					setSaved("#00b074");
+				}
+				localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
 			} else {
+				let bookmarks = [];
 				bookmarks.push(props.id);
+				localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
 				setSaved("#00b074");
 			}
-			localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
-		} else {
-			let bookmarks = [];
-			bookmarks.push(props.id);
-			localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
-			setSaved("#00b074");
 		}
+		
 	}
 	useEffect(() => {
 		if (localStorage.getItem("bookmarks")) {

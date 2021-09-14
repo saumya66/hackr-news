@@ -1,44 +1,57 @@
 .comments {
-	height: fit-content;
-	width: 98%;
+  height: fit-content;
+  width: 98%;
 
-	padding: 0.5rem;
-	background-color: var(--color-bg-primary);
-	display: flex;
-	flex-direction: column;
-	border-bottom: 1px solid #b6bdcc;
+  padding: 0.5rem;
+  background-color: var(--color-bg-primary);
+  display: flex;
+  flex-direction: column;
 }
 .rowOne {
-	height: 1rem;
-	display: flex;
-	align-items: center;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+.userName {
+	display: flex;  align-items: center;
+
+}
+.time{
+	color: var(--color-text-primary);
+	opacity: 0.8;
+	font-size: 0.9rem;
 }
 
 .name {
-	color: var(--color-text-primary);
-	padding-left: 0.6rem;
-	font-weight: 600;
+  color: var(--color-text-primary);
+  padding-left: 0.6rem;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 .pageTitle {
-	display: flex;
-	width: 98%;
-	height: 2rem;
-	align-self: center;
-	align-items: flex-start;
-	margin-top: 0.4rem;
-	padding-left: 0.4rem;
+  display: flex;
+  width: 98%;
+  height: 2rem;
+  align-self: center;
+  align-items: flex-start;
+  margin-top: 0.4rem;
+  padding-left: 0.4rem;
 }
 .pageName {
-	font-size: 1rem;
-	opacity: 0.6;
+  font-size: 1rem;
+  opacity: 0.6;
 }
 
 .rowSecond {
-	height: fit-content;
-	padding-top: 0.5rem;
-	font-weight: 500;
+  height: fit-content;
+  padding-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .rowThird {
-	/* height: 2rem; */
+  /* height: 2rem; */
 }

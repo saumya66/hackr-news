@@ -5,7 +5,8 @@ import styles from "../styles/Landing.module.css";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
-import Script from "next/script";
+import { useUser } from "@auth0/nextjs-auth0";
+import { useRouter } from 'next/router'
 
 const FeatureCard = ({ name, desc }) => {
 	return (
@@ -16,7 +17,18 @@ const FeatureCard = ({ name, desc }) => {
 	);
 };
 
+
+
 export default function Home() {
+	const {user}= useUser();
+	const router = useRouter()
+
+	useEffect(()=>{
+		if(user){
+			router.push("/top")
+		}
+		
+	},[]);
 	return (
 		<>
 			<Head>
@@ -50,18 +62,40 @@ export default function Home() {
 					<div className={styles.leftComp}>
 						<h1 className={styles.heading}>Read HackrNews with Ease.</h1>
 						<div className={styles.desc}>
-							<Link href="/top">
-								<button className={styles.authBtn}>Get In !</button>
-							</Link>
-							<a href="https://github.com/saumya66/hackr-news">
-								<button className={styles.authBtn}>
-									<FontAwesomeIcon
-										style={{ marginRight: "0.2rem" }}
-										icon={faStar}
-									/>
-									<span>Github </span>
-								</button>
-							</a>
+							<div className={styles.descRowOne}>
+								<Link href="/top">
+									<button className={styles.authBtn}>Get In !</button>
+								</Link>
+								<a
+									href="https://github.com/saumya66/hackr-news"
+									target="_blank"
+									rel="noreferrer"
+								>
+									<button className={styles.authBtn}>
+										<FontAwesomeIcon
+											style={{ marginRight: "0.2rem" }}
+											icon={faStar}
+										/>
+										<span>Github </span>
+									</button>
+								</a>
+							</div>
+							<div className={styles.descRowTwo}>
+								<a
+									href="https://www.producthunt.com/posts/hackrnews?utm_source=badge-review&utm_medium=badge&utm_souce=badge-hackrnews#discussion-body"
+									target="_blank"
+									rel="noreferrer"
+								>
+									<div>
+										<Image
+											src="https://api.producthunt.com/widgets/embed-image/v1/review.svg?post_id=310643&theme=dark"
+											alt="HackrNews - Read Hacker News with ease | Product Hunt"
+											width="240"
+											height="54"
+										/>
+									</div>
+								</a>
+							</div>
 						</div>
 					</div>
 					<div className={styles.rightComp}>

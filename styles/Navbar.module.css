@@ -6,6 +6,8 @@
 	background-color: var(--color-bg-primary);
 	justify-content: space-between;
 	align-items: center;
+	position: fixed;
+	z-index: 999;
 }
 .logoCont {
 	display: flex;
@@ -89,7 +91,7 @@
 	width: 80px;
 	border: none;
 	/* background-color: #5b32ed; */
-
+cursor: pointer;
 	background-image: linear-gradient(
 		to right,
 		#4776e6 0%,
@@ -247,6 +249,7 @@
 	display: flex;
 	padding-bottom: 0.2rem;
 	flex-direction: column;
+	z-index: 999;
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
